@@ -4,21 +4,12 @@
     <head>
         <meta charset="utf-8">
         <title>Gerencia de projetos</title>
-        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     </head>
     <body>
         <div class="wrapper">
-            <h1><a href="{% url 'articles:list' %}"> Gerencia de Projetos </a> </h1>
-            <nav>
-                <ul>
-                    <li>
-                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="POST">
-                            {% csrf_token %}
-                            <button type="submit">Logout</button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
+            <img src="">Logo da feuc aqui
+            <h2><a href="{% url 'accounts:login' %}"> Gerencia de Projetos </a></h2>
             {% block content %}
             {% endblock %}
         </div>
