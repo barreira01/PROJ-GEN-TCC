@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<!--Esta é para ser a homepage do aluno-->
+    <h1> Olá, </h1>
+    <nav>
+        <ul>
+            <li>
+                <form class="logout-link" action="{% url 'accounts:login' %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}

@@ -11,7 +11,7 @@ def signup_view(request):
             user = form.save()
             # log the user in
             login(request, user)
-            return redirect('articles:list')
+            return redirect('aluno:list')
     else:
         form = UserCreationForm
     return render(request, 'accounts/signup.html', {'form': form})
@@ -24,7 +24,7 @@ def login_view(request):
             #log in the user
             user = form.get_user()
             login(request, user)
-            return redirect('articles:list')
+            return redirect('aluno:list')
 
     else:
         form = AuthenticationForm()
@@ -34,4 +34,4 @@ def login_view(request):
 def logout_view(request):
     if request.method == "POST":
         logout(request)
-        return redirect('articles:list')
+        return redirect('aluno:list')
