@@ -1,15 +1,65 @@
 {% extends 'base_layout.html' %}
 {% block content %}
 <!--Esta é para ser a homepage do aluno-->
-    <h1> Olá, </h1>
-    <nav>
-        <ul>
-            <li>
-                <form class="logout-link" action="{% url 'accounts:login' %}" method="POST">
-                    {% csrf_token %}
-                    <button type="submit">Logout</button>
-                </form>
-            </li>
-        </ul>
-    </nav>
+<div class="container-fluid">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Documentos Base</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Histórico de Versões</a>
+                    </li>
+                </ul>
+                {% if user.is_authenticated %}
+                <h6> Olá, {{ user.username }} {{user.last_name}}. <a href={% url 'accounts:login' %}>{% csrf_token %}Logout </a></h6>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div>Projeto</div>
+                <div>
+                    <p>teste</p>
+                </div>
+        </div>
+        <div class="col-md-4 align-self-end">
+            <div>Notificações</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 align-self-center">
+            <div>Mural</div>
+                <div>
+                    <p>Professor vai inserir coisa aq</p>
+                </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div>Últimas versões</div>
+                <div>
+                    <ul>
+                        <li>Teste</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="col-md-2 align-self-end">
+            <div>Nota</div>
+        </div>
+        <div class="col-md-2 align-self-end">
+            <div>Contato</div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}

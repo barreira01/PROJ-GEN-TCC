@@ -1,11 +1,13 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-   <br>
-   <h1>Login</h1><br>
-   <form class="site-form" action="{% url 'accounts:login' %}}" method="post">
-       {% csrf_token %}
-       {{ form }}
-       <input type="submit" value="Acessar">
-   </form>
+<br>
+    <div>
+        <h3>Login</h3><br>
+        <form class="site-form" action="{% url 'accounts:login' %}}" method="post">
+        {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Acessar">
+        </form>
+    </div>
 {% endblock %}

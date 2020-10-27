@@ -5,10 +5,6 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('aluno', '0001_binitial'),
-    ]
-
     operations = [
         migrations.CreateModel(
             name='Aluno',
