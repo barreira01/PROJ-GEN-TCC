@@ -1,0 +1,81 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<!--Esta é para ser a homepage do aluno-->
+<div class="container-fluid">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Documentos Base</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Histórico de Versões</a>
+                    </li>
+                </ul>
+                {% if user.is_authenticated %}
+                <h6> Olá, {{ user.username }} {{user.last_name}}. <a href={% url 'accounts:login' %}>{% csrf_token %}Logout </a></h6>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+    <div class="row">   
+        <div class="col-md-2">
+            <label> 
+                Projetos
+            </label>
+            <div>
+                <a href="#" class="btn btn-primary btn-md active" role="button">Add</a>
+                <a href="#" class="btn btn-default btn-md active" role="button">Edit</a>
+            </div>
+        </div>
+        <div class="col-md-6 align-self-center">
+            <label>Mural</label>
+                <section>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Congue eu consequat ac felis donec et odio pellentesque. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Nisi lacus sed viverra tellus in hac habitasse. Nullam non nisi est sit amet. Risus nec feugiat in fermentum posuere urna nec. Nibh cras pulvinar mattis nunc sed blandit libero. Tortor pretium viverra suspendisse potenti.</p>
+                    <p>Turpis egestas maecenas pharetra convallis. Etiam erat velit scelerisque in dictum non. Eu lobortis elementum nibh tellus molestie nunc non. Turpis egestas integer eget aliquet nibh.Malesuada proin libero nunc consequat interdum. Vestibulum rhoncus est pellentesque elit ullamcorper. Sit amet venenatis urna cursus eget nunc scelerisque. Gravida quis blandit turpis cursus in. Viverra vitae congue eu consequat ac. Nunc consequat interdum varius sit amet mattis. Dolor magna eget est lorem. Morbi tempus iaculis urna id volutpat lacus laoreet.</p>
+                </section>
+            </div>
+        <div class="col-md-2">
+            <label>Notificações</label>
+        </div>
+        <div class="col-sm-2">
+            <label>
+                Nota
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label>
+                Últimas versões
+            </label>
+                <div>
+                    <ul>
+                        <li>Teste</li>
+                        <li>Teste 2</li>
+                        <li>Teste 3</li>
+                        <li>Teste 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <label>
+                Contato
+            </label>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="row">
+    </div>
+</div>
+
+
+{% endblock %}
