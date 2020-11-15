@@ -5,8 +5,7 @@
  /* Navbar */
 
 .navbar{
-    border-bottom: 1px 
-    solid #333;
+    /*border-bottom: 1px solid #333;*/
     margin-bottom: 20px;
 }
 
@@ -20,23 +19,6 @@
 
 .navbar-light .navbar-nav a.nav-link{
     color: #333;
-    letter-spacing: 1px;
-}
-
-/*Rodapé*/
-
-footer {
-    background-color: #333;
-    height: 300px;
-    border-top: 2px 
-    solid #202020;
-}
-
-footer p{
-    color: #f5f5f5;
-    text-align: center;
-    top: 50%;
-    position: relative;
 }
 
 body{
@@ -56,7 +38,12 @@ h1,h2,h3,h4,h5{
 }
 
 a, a:hover, a:visited{
-    color: #fff;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a,a.logout{
+    color: rgb(4, 0, 255);
     text-decoration: none;
 }
 
@@ -66,7 +53,28 @@ div.bloco>div{background-color:#6f88f5 !important;font-size: 25px;}
 
 div.bloco>div>p{color: #000000 !important; font-size: 25px;}
 
+#Note{border: 1px rgb(255, 51, 0); border-radius: 5px;}
+
+div>div>#lastversions{border-radius: 2px;}
+textarea.comments{width: 550px; height: 60px;}
+#enviarcomentario{margin-top: -30px;}
+
 img.logo {
     margin-top: 5px;
     margin-left: 5px;
+}
+
+/*Rodapé*/
+
+footer {
+    background-color: #333;
+    height: 60px;
+    border-top: 2px;
+}
+
+footer{
+    color: #f5f5f5;
+    text-align: center;
+    top: 30%;
+    position: relative;
 }
