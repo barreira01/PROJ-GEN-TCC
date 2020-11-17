@@ -1,3 +1,11 @@
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+    }
+
 .container-fluid{
     padding: 0;
 }
@@ -5,7 +13,7 @@
  /* Navbar */
 
 .navbar{
-    /*border-bottom: 1px solid #333;*/
+    border: 1px solid rgb(255, 255, 255); border-radius: 5px;
     margin-bottom: 20px;
 }
 
@@ -20,15 +28,14 @@
 .navbar-light .navbar-nav a.nav-link{
     color: #333;
 }
+#brand-logo{width: 150px !important;}
+#menu{color: #333;}
+#options{color: #333;}
 
-body{
-    background-color: #a9c0db;
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-}
+body{overflow-inline: hidden;background-color: #0e63c4;color: #000000;font-family: Arial, Helvetica, sans-serif;background-repeat: no-repeat;}
 
 body>div.wrapper>img{
-    margin: 15px;
+    margin: 0px;
 }
 
 h1,h2,h3,h4,h5{
@@ -42,7 +49,7 @@ a, a:hover, a:visited{
     text-decoration: none;
 }
 
-a,a.logout{
+a.logout{
     color: rgb(4, 0, 255);
     text-decoration: none;
 }
@@ -51,13 +58,37 @@ div.bloco{background-color:#fff !important;font-size: 25px;width: 500px; height:
 
 div.bloco>div{background-color:#6f88f5 !important;font-size: 25px;}
 
-div.bloco>div>p{color: #000000 !important; font-size: 25px;}
+div.bloco>div>p{color: #b3adad70 !important; font-size: 25px;}
 
-#Note{border: 1px rgb(255, 51, 0); border-radius: 5px;}
+#addFile{width: 125px;}
+
+#Note{border: 4px rgb(209, 209, 209); }
 
 div>div>#lastversions{border-radius: 2px;}
-textarea.comments{width: 550px; height: 60px;}
-#enviarcomentario{margin-top: -30px;}
+
+/* Blocos Aluno */
+#project{border:1px solid #fff; border-radius: 5px ;margin-left: 40px; background-color: #fff; height:auto;}
+#feed{border:1px solid #fff; border-radius: 5px ;margin-left: auto; background-color: #fff; margin-left: 70px;}
+textarea#comments{width: 50%; height: 60px;border:1px solid #00000000; border-radius: 5px; background-color: rgba(97, 97, 97, 0.151); text-transform: none !important;}
+#enviarcomentario{border-radius: 5px;margin-top: 35px;}
+#final{border:1px solid #fff; border-radius:5px ;margin-left:70px; background-color: #fff; height: auto;}
+
+/* Blocos Professor */
+#painel{border:1px solid #fff; border-radius: 5px ;margin-left: auto; background-color: #fff; margin-left: 70px;}
+#orientations{width: 500px; height: 500px;}
+/*Animacao de fundo*/
+canvas {
+    display: flex;
+}
+
+  /* ---- particles.js container ---- */
+#particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#a9c0db00;
+}
+
 
 img.logo {
     margin-top: 5px;
@@ -65,16 +96,5 @@ img.logo {
 }
 
 /*Rodapé*/
-
-footer {
-    background-color: #333;
-    height: 60px;
-    border-top: 2px;
-}
-
 footer{
-    color: #f5f5f5;
-    text-align: center;
-    top: 30%;
-    position: relative;
-}
+    color: #f5f5f5;text-align: center;top: 30%;position: relative;background-color: #333;height: 60px;border-radius: 5px; width: auto;}

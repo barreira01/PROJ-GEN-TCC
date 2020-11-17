@@ -19,3 +19,6 @@ def logon(request):
 def AlunoPainel(request):
     # return HttpResponse('about')
     return render(request, 'alunopainel.html')
+
+def ProfessorPainel(request):
+    return render('request','professorpainel.html')

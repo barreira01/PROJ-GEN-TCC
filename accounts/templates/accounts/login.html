@@ -25,14 +25,14 @@
 <!--===============================================================================================-->
 </head>
 <body>
-
+<div id="particles-container"></div>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
 				<form class="site-form" action="{% url 'accounts:login' %}}" method="post">
 					{% csrf_token %}
+					<img src="{% static 'img/logo.png' %}" id="brand-logo" width="95%" >
 					<span class="login100-form-title p-b-55">
-						Login
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Insira um login válido">
@@ -67,16 +67,7 @@
 			</div>
 		</div>
 	</div>
-	
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </body>
 </html>   
