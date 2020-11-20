@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse self-align-inicial" id="navbarSupportedContent">
                 <div class="dropdown">
                     <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" >
-                        Documentos de base
+                        Documentos de referência
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" id="options" href="#">Doc1</a>
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                 <div>
-                    <button type="button" class="btn btn-light" href="#" onclick="Popup()"> Histórico de Versões</button>
+                    <button type="button" class="btn btn-light" href="#" onclick="Popup()"> Projetos aprovados</button>
                 </div>
             </div>
             <div class="nav justify-content-end">
@@ -35,22 +35,53 @@
     </nav>
     </div>
     <div class="row">   
-        <div class="col-8 align-items-center" id="feed" >
+        <div class="col-md-9" id="painel" >
             <br />
             <label>Painel</label>
             <br />
-            <div id="orientations">
-                Atuais orientações
+            <div class="dropdown-divider"></div>
+            <div class="row">
+                <div class="col-md-4" id="orientations">
+                    <br/>
+                    <label id="proflabel">Atuais orientações</label>
                     <div class="dropdown-divider"></div>
-            </div>
+                        <ul id="list">
+                            <!--CADA CAMPO, PRECISA SER PREENCHIDO COM UM FOR PARA NOME DE PROJETO-->
+                            <li><a href="{% url 'professor:projects' %}">Projeto 1</a></li>
+                            <li><a href="#">Projeto 2</a></li>
+                            <li><a href="#">Projeto 3</a></li>
+                        </ul>
+                </div>
+                <div class="col-md-4 " id="apresentations">
+                    <br/>
+                    <label id="proflabel">Próximas apresentações</label>
+                    <div class="dropdown-divider"></div>
+                        <ul id="list">
+                            <li>Projeto 1: 00/00/0000</li><!--CADA CAMPO, PRECISA SER PREENCHIDO COM UM FOR PARA DATA-->
+                            <li>Projeto 2: 11/11/1111</li>
+                            <li>Projeto 3: 22/22/2222</li>
+                        </ul>
+                    <br/>
+                </div>
+                <div class="col-md-4" id="sendProject">
+                    <br/>
+                    <label id="proflabel">Enviar projetos aprovados</label>
+                    <div class="dropdown-divider"></div>
+                        <input type= "file" class="btn btn-primary btn-md " id="addFile" >
+                        <br/>
+                        <br/>
+                        <a href="#" class="btn btn-danger btn-md" role="button" type="Reset">Limpar</a>
+                        <a href="#" class="btn btn-success btn-md" role="button" type="submit">Enviar</a>
+                </div>
             </div>
         </div>
+    </div>
     <!--MODAL DO HISTÓRICO DE DOCUMENTOS-->
     <div id="modala" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title">Histórico de versões</h5>
+                <h5 class="modal-title">Projetos Aprovados</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -65,6 +96,5 @@
     </div>
 </div>
 </div>
-
 
 {% endblock %}

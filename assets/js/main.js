@@ -1,9 +1,30 @@
     //Função de popup    
     function Popup(){
-        $("#modala").modal({
+        $("#modal").modal({
             show:true
         });
-        }
+    }
+
+    function PopupB(){
+        $("#modalb").modal({
+            show:true
+        });
+    }
+    function PopupC(){
+        $("#modalc").modal({
+            show:true
+        });
+    }
+    function PopupD(){
+        $("#modald").modal({
+            show:true
+        });
+    }
+    function PopupE(){
+        $("#modale").modal({
+            show:true
+        });
+    }
     //Animação de fundo
     particlesJS("particles-container", {
     particles: {
@@ -77,4 +98,5 @@
     requestAnimationFrame(update);
     };
     requestAnimationFrame(update);
+
 

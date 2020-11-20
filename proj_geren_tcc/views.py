@@ -6,11 +6,9 @@ def homepage(request):
     # return HttpResponse('HomePage')
     return render(request, 'homepage.html')
 
-
 def about(request):
     # return HttpResponse('about')
     return render(request, 'about.html')
-
 
 def logon(request):
     # return HttpResponse('about')
@@ -22,3 +20,6 @@ def AlunoPainel(request):
 
 def ProfessorPainel(request):
     return render('request','professorpainel.html')
+
+def CoordenadorPainel(request):
+    return render('request','coordenadorpainel.html')

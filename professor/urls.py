@@ -1,11 +1,11 @@
 from django.urls import path
-from. import views
-
-
+from .views import Professor_page, Professor_orientations
 app_name = 'professor'
 
+
 urlpatterns = [
-    path('', views.Professor_page, name="list"),
-    path('<slug:slug>/', views.Prodessor_detail, name="detail"),
+    path('', Professor_page, name='painel'),
+    path('projorientacao/', Professor_orientations, name='projects'),
+    #path('projorientacao/<int:cdP>/', Professor_orientations, name='projects'),
 
 ]

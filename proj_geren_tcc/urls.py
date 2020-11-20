@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('aluno/', include('aluno.urls')),
-    path('professor/', include('professor.urls')),
+    path('professor/', include('professor.urls', namespace='professor')),
+    path('coordenador/', include('coordenador.urls', namespace='coordenador')),
     path('about/', views.about),
     path('', views.homepage),
 

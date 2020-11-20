@@ -1,0 +1,120 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+<div id="particles-container"></div>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+            <a class="navbar-brand pull-right" ><img src="{% static 'img/logo-png.png' %}" id="brand-logo"></a>
+            <hr/>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse self-align-inicial" id="navbarSupportedContent">
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" >
+                        Documentos de base
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" id="options" href="#">Doc1</a>
+                            <a class="dropdown-item" id="options" href="#">Doc2</a>
+                            <a class="dropdown-item" id="options" href="#">Doc3</a>
+                            <a class="dropdown-item" id="options" href="#">Doc4</a>
+                        </div>
+                    </div>
+                <div>
+                    <button type="button" class="btn btn-light" href="#" onclick="Popup()"> Histórico de Versões</button>
+                </div>
+            </div>
+            <ul class="nav justify-content-end">
+                {% if user.is_authenticated %}
+                <h6> Olá, {{ user.username }} {{user.last_name}}. <a class="logout" href={% url 'accounts:login' %}>{% csrf_token %}Logout</a></h6>
+                {% endif %}
+            </div>
+    </nav>
+    </div>
+    <div class="row">   
+        <div class="col-md-2" id="project">
+            <br>
+            <label>Projetos</label>
+            <div class="dropdown-divider"></div>
+            <div id="envios">
+                Enviar documento
+                <input type= "file" class="btn btn-primary btn-md " id="addFile" >
+                <br>
+                <br>
+                <a href="#" class="btn btn-danger btn-md" role="button" type="Reset">Limpar</a>
+                <a href="#" class="btn btn-success btn-md" role="button" type="submit">Enviar</a>
+            </div>
+            <br />
+                <div id="lastVersions">
+                    <div class="dropdown-divider"></div>
+                    <label>Últimas versões</label>
+                    <ul>
+                        <li>Teste</li>
+                        <li>Teste 2</li>
+                        <li>Teste 3</li>
+                        <li>Teste 4</li>
+                    </ul>
+                </div>
+            </div>  
+        <div class="col-md-6 align-self-center" id="feed" >
+            <br />
+            <label>Mural</label>
+            <br />
+                <section>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Congue eu consequat ac felis donec et odio pellentesque. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Nisi lacus sed viverra tellus in hac habitasse. Nullam non nisi est sit amet. Risus nec feugiat in fermentum posuere urna nec. Nibh cras pulvinar mattis nunc sed blandit libero. Tortor pretium viverra suspendisse potenti.</p>
+                    <p>Turpis egestas maecenas pharetra convallis. Etiam erat velit scelerisque in dictum non. Eu lobortis elementum nibh tellus molestie nunc non. Turpis egestas integer eget aliquet nibh.Malesuada proin libero nunc consequat interdum. Vestibulum rhoncus est pellentesque elit ullamcorper. Sit amet venenatis urna cursus eget nunc scelerisque. Gravida quis blandit turpis cursus in. Viverra vitae congue eu consequat ac. Nunc consequat interdum varius sit amet mattis. Dolor magna eget est lorem. Morbi tempus iaculis urna id volutpat lacus laoreet.</p>
+                </section>
+                <div class="dropdown-divider"></div>
+                <textarea id="comments" placeholder="Insira seu comentário..."></textarea>
+                <button class="btn btn-success btn-lg" id="enviarcomentario">Enviar</button>
+            </div>
+        <div class="col-md-2" id="final">
+            <br />
+                <div id="checklist">
+                    <label>Checklist</label>
+                        <ul>
+                            <li>Teste</li>
+                            <li>Teste 2</li>
+                            <li>Teste 3</li>
+                            <li>Teste 4</li>
+                        </ul>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div id="Note">
+                    <label>Nota</label>
+                    <br> 
+                    <b>0.0</b>
+                </div>
+                <div class="dropdown-divider"></div>
+                <br>
+                <div id="contact">
+                    <label>Entre em contato com o seu orientador</label>
+                        <button class="btn btn-primary btn-md" id="sendMail"><a href="mailto:teste@email.com?subject=Solicito contato" > Enviar mensagem</a></button>
+                    </div>        
+                </div>
+    </div>
+    <!--MODAL-->
+    <div id="modala" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Histórico de versões</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p><!--INCLUIR AQUI EVENTO PARA LISTAR DO BANCO--></p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

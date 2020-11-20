@@ -8,13 +8,15 @@ from django.contrib.auth.models import User
 def login(request): #add autenticacao de prof e coord depois
     if request.method == 'POST':
         user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
-        codConta = 2
+        codConta = 1
         if user is not None:
             auth.login(request, user)
         if user is not None and codConta == 1:
-            return redirect('aluno:list') 
+            return redirect('coordenador:painel') 
         if user is not None and codConta == 2:
-            return redirect('professor:list')
+            return redirect('professor:painel')
+        if user is not None and codConta == 3:
+            return redirect('aluno:painel') 
         else:
             return render(request, 'accounts/login.html', {'error': 'Usuário ou senha incorretos'})
     else:

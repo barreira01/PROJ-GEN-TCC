@@ -69,13 +69,26 @@ div>div>#lastversions{border-radius: 2px;}
 /* Blocos Aluno */
 #project{border:1px solid #fff; border-radius: 5px ;margin-left: 40px; background-color: #fff; height:auto;}
 #feed{border:1px solid #fff; border-radius: 5px ;margin-left: auto; background-color: #fff; margin-left: 70px;}
-textarea#comments{width: 50%; height: 60px;border:1px solid #00000000; border-radius: 5px; background-color: rgba(97, 97, 97, 0.151); text-transform: none !important;}
+#comments{width: 50%; height: 60px;border:1px solid #00000000; border-radius: 5px; background-color: rgba(97, 97, 97, 0.151); text-transform: none !important;resize: none !important;}
 #enviarcomentario{border-radius: 5px;margin-top: 35px;}
-#final{border:1px solid #fff; border-radius:5px ;margin-left:70px; background-color: #fff; height: auto;}
+#final{border:1px solid #fff; border-radius:5px ;margin-left:70px; background-color: #fff; height: 400px;}
 
 /* Blocos Professor */
-#painel{border:1px solid #fff; border-radius: 5px ;margin-left: auto; background-color: #fff; margin-left: 70px;}
-#orientations{width: 500px; height: 500px;}
+#proflabel{color: #ffffff;}
+#list{color: #ffffff;}
+#painel{border:1px solid #fff; border-radius: 5px ;margin-left: auto; background-color: #fff; margin-left: 70px; height: 500px;}
+div>div>div>#orientations{background-color:#0e63c4 ;width: 350px; height: 150px; border-radius: 5px; margin-left: 20px;}
+div>div>div>div>#apresentations{background-color:#0e63c4 ;width: 350px; height: 150px; border-radius: 5px; margin-left: 20px;}
+div>div>div>div>div>#sendProject{background-color:#0e63c4 ;width: 350px; height: 200px; border-radius: 5px; margin-left: 20px; margin-top: 20px;}
+
+/* Bloco Coordenador*/
+#list{color: #ffffff;}
+#painelCoord{border:1px solid #fff; border-radius: 5px ;margin-left: auto; background-color: #fff; margin-left: 70px; height: 500px;}
+div>div>div>div>#student{background-color:#0e63c4 ;width: 350px; height: 150px; border-radius: 5px; margin-left: 20px;}
+div>div>div>div>#newProfessor{background-color:#0e63c4 ;width: 350px; height: 150px; border-radius: 5px; margin-left: 20px; }
+div>div>div>div>div>#approved{background-color:#0e63c4 ;width: 350px; height: 150px; border-radius: 5px; margin-left: 20px; margin-top: 20px;}
+div>div>div>div>div>#sendDoc{background-color:#0e63c4 ;width: 350px; height: 200px; border-radius: 5px; margin-left: 20px;margin-top: 20px;}
+
 /*Animacao de fundo*/
 canvas {
     display: flex;
