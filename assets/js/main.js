@@ -25,6 +25,21 @@
             show:true
         });
     }
+    function PopupF(){
+        $("#modalf").modal({
+            show:true
+        });
+    }
+    function PopupG(){
+        $("#modalg").modal({
+            show:true
+        });
+    }
+    function PopupH(){
+        $("#modalh").modal({
+            show:true
+        });
+    }
     //Animação de fundo
     particlesJS("particles-container", {
     particles: {

@@ -17,14 +17,15 @@
                         Documentos de referência
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" id="options" href="#">Doc1</a>
-                            <a class="dropdown-item" id="options" href="#">Doc2</a>
-                            <a class="dropdown-item" id="options" href="#">Doc3</a>
-                            <a class="dropdown-item" id="options" href="#">Doc4</a>
+                        <!--Placeholder para apresentação-->
+                            <a class="dropdown-item" id="options" href="#">Etapas para o desenvolvimento do Projeto Final Individual </a>
+                            <a class="dropdown-item" id="options" href="#">Modelo de cronograma</a>
+                            <a class="dropdown-item" id="options" href="#">EXEMPLO: Documentação do modelo de casos de uso</a>
+                            <a class="dropdown-item" id="options" href="#">Projeto de banco - Passo a passo (Modelo)</a>
                         </div>
                     </div>
                 <div>
-                    <button type="button" class="btn btn-light" href="#" onclick="Popup()"> Projetos aprovados</button>
+                    <button type="button" class="btn btn-light" href="#" onclick="PopupB()"> Projetos aprovados</button>
                 </div>
             </div>
             <div class="nav justify-content-end">
@@ -47,19 +48,17 @@
                     <div class="dropdown-divider"></div>
                         <ul id="list">
                             <!--CADA CAMPO, PRECISA SER PREENCHIDO COM UM FOR PARA NOME DE PROJETO-->
-                            <li><a href="{% url 'professor:projects' %}">Projeto 1</a></li>
-                            <li><a href="#">Projeto 2</a></li>
-                            <li><a href="#">Projeto 3</a></li>
+                            <!--Placeholder para apresentação-->
+                            <li><a href="{% url 'professor:projects' %}">Sistema de gerenciamento de trabalho de conclusão de curso</a></li>
                         </ul>
                 </div>
                 <div class="col-md-4 " id="apresentations">
                     <br/>
                     <label id="proflabel">Próximas apresentações</label>
                     <div class="dropdown-divider"></div>
+                    <!--Placeholder para apresentação-->
                         <ul id="list">
-                            <li>Projeto 1: 00/00/0000</li><!--CADA CAMPO, PRECISA SER PREENCHIDO COM UM FOR PARA DATA-->
-                            <li>Projeto 2: 11/11/1111</li>
-                            <li>Projeto 3: 22/22/2222</li>
+                            <li>Projeto Gerenciamento de TCC: 20/12/2020</li><!--CADA CAMPO, PRECISA SER PREENCHIDO COM UM FOR PARA DATA-->
                         </ul>
                     <br/>
                 </div>
@@ -67,17 +66,18 @@
                     <br/>
                     <label id="proflabel">Enviar projetos aprovados</label>
                     <div class="dropdown-divider"></div>
-                        <input type= "file" class="btn btn-primary btn-md " id="addFile" >
-                        <br/>
-                        <br/>
-                        <a href="#" class="btn btn-danger btn-md" role="button" type="Reset">Limpar</a>
-                        <a href="#" class="btn btn-success btn-md" role="button" type="submit">Enviar</a>
+                        <form>
+                            <input type= "file" class="btn btn-primary btn-md " id="addFile" >
+                            <br/>
+                            <br/>
+                            <input type="Reset" class="btn btn-danger btn-md" role="button" value="Limpar">
+                            <input type="submit" class="btn btn-success btn-md" role="button" value="Enviar">
+                        </form>
                 </div>
             </div>
         </div>
     </div>
-    <!--MODAL DO HISTÓRICO DE DOCUMENTOS-->
-    <div id="modala" class="modal" tabindex="-1" role="dialog">
+    <div id="modalb" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -88,6 +88,22 @@
                 </div>
                 <div class="modal-body">
                 <p><!--INCLUIR AQUI EVENTO PARA LISTAR DO BANCO--></p>
+                <!--Placeholder para apresentação-->
+                    <form>
+                        <label for="fstatus">Selecione o ano:</label>
+                        <select id="fstatus" name="fstatus">
+                            <option value=" "><a href="#">SELECIONE</a></option>
+                            <option value="2019"><a href="#">2019</a></option>
+                            <option value="2020"><a href="#">2020</a></option>
+                        </select><br>
+                        <label for="fstatus">Selecione o período:</label>
+                            <select id="fstatus" name="fperiodo">
+                                <option value=" "><a href="#">SELECIONE</a></option>
+                                <option value="1"><a href="#">1</a></option>
+                                <option value="2"><a href="#">2</a></option>
+                            </select><br><br>
+                        <a href="">SGTCC - Sistema de gerenciamento de trabalho de conclusão de curso</a>
+                    </form>
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

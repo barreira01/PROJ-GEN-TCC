@@ -43,9 +43,9 @@ h1,h2,h3,h4,h5{
     margin: 0;
     color: #000000;
 }
-
-a, a:hover, a:visited{
-    color: rgb(255, 255, 255);
+/*a:hover, a:visited*/
+a{
+    color: rgba(73, 182, 255, 0.952);
     text-decoration: none;
 }
 
@@ -64,14 +64,18 @@ div.bloco>div>p{color: #b3adad70 !important; font-size: 25px;}
 
 #Note{border: 4px rgb(209, 209, 209); }
 
-div>div>#lastversions{border-radius: 2px;}
+div>div>#status{border-radius: 2px;}
+
+/* FeedChat */
+#studentFeed{border-radius: 3px!important; background-color: #4dad4d;}
+#professorFeed{border-radius: 3px!important; background-color: #ad4dad;}
 
 /* Blocos Aluno */
 #project{border:1px solid #fff; border-radius: 5px ;margin-left: 40px; background-color: #fff; height:auto;}
 #feed{border:1px solid #fff; border-radius: 5px ;margin-left: auto; background-color: #fff; margin-left: 70px;}
 #comments{width: 50%; height: 60px;border:1px solid #00000000; border-radius: 5px; background-color: rgba(97, 97, 97, 0.151); text-transform: none !important;resize: none !important;}
 #enviarcomentario{border-radius: 5px;margin-top: 35px;}
-#final{border:1px solid #fff; border-radius:5px ;margin-left:70px; background-color: #fff; height: 400px;}
+#final{border:1px solid #fff; border-radius:5px ;margin-left:70px; background-color: #fff; height: 600px;}
 
 /* Blocos Professor */
 #proflabel{color: #ffffff;}
@@ -88,6 +92,8 @@ div>div>div>div>#student{background-color:#0e63c4 ;width: 350px; height: 150px; 
 div>div>div>div>#newProfessor{background-color:#0e63c4 ;width: 350px; height: 150px; border-radius: 5px; margin-left: 20px; }
 div>div>div>div>div>#approved{background-color:#0e63c4 ;width: 350px; height: 150px; border-radius: 5px; margin-left: 20px; margin-top: 20px;}
 div>div>div>div>div>#sendDoc{background-color:#0e63c4 ;width: 350px; height: 200px; border-radius: 5px; margin-left: 20px;margin-top: 20px;}
+
+#fstatus{width:200px;}
 
 /*Animacao de fundo*/
 canvas {

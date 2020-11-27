@@ -13,13 +13,13 @@
             <div class="collapse navbar-collapse self-align-inicial" id="navbarSupportedContent">
                 <div class="dropdown">
                     <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" >
-                        Documentos de base
+                        Documentos de referência
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" id="options" href="#">Doc1</a>
-                            <a class="dropdown-item" id="options" href="#">Doc2</a>
-                            <a class="dropdown-item" id="options" href="#">Doc3</a>
-                            <a class="dropdown-item" id="options" href="#">Doc4</a>
+                            <a class="dropdown-item" id="options" href="#">Etapas para o desenvolvimento do Projeto Final Individual </a>
+                            <a class="dropdown-item" id="options" href="#">Modelo de cronograma</a>
+                            <a class="dropdown-item" id="options" href="#">EXEMPLO: Documentação do modelo de casos de uso</a>
+                            <a class="dropdown-item" id="options" href="#">Projeto de banco - Passo a passo (Modelo)</a>
                         </div>
                     </div>
                 <div>
@@ -37,25 +37,31 @@
         <div class="col-md-2" id="project">
             <br>
             <label>Projetos</label>
-            <div class="dropdown-divider"></div>
+            <!--<div class="dropdown-divider"></div>
             <div id="envios">
                 Enviar documento
-                <input type= "file" class="btn btn-primary btn-md " id="addFile" >
-                <br>
-                <br>
-                <a href="#" class="btn btn-danger btn-md" role="button" type="Reset">Limpar</a>
-                <a href="#" class="btn btn-success btn-md" role="button" type="submit">Enviar</a>
-            </div>
+                <form>
+                    <input type= "file" class="btn btn-primary btn-md " id="addFile" >
+                    <br>
+                    <br>
+                    <a href="#" class="btn btn-danger btn-md" role="button" type="Reset">Limpar</a>
+                    <a href="#" class="btn btn-success btn-md" role="button" type="submit">Enviar</a>
+                </form>
+            </div>-->
             <br />
-                <div id="lastVersions">
+                <div id="status">
                     <div class="dropdown-divider"></div>
-                    <label>Últimas versões</label>
-                    <ul>
-                        <li>Teste</li>
-                        <li>Teste 2</li>
-                        <li>Teste 3</li>
-                        <li>Teste 4</li>
-                    </ul>
+                    <label>Status</label>
+                    <form>
+                        <select id="fstatus" name="fstatus">
+                            <option value=" "><a href="#">SELECIONE</a></option>
+                            <option value="em-andamento"><a href="#">Em andamento</a></option>
+                            <option value="concluido-aguardando"><a href="#">Concluído: Aguardando apresentação a banca</a></option>
+                            <option value="concluido-aprovado"><a href="#">Aprovado</a></option>
+                            <option value="concluido-reprovado"><a href="#">Reprovado</a></option>
+                        </select><br><br>
+                        <input type="submit" class="btn btn-success" value="Salvar">
+                    </form>
                 </div>
             </div>  
         <div class="col-md-6 align-self-center" id="feed" >
@@ -63,8 +69,7 @@
             <label>Mural</label>
             <br />
                 <section>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Congue eu consequat ac felis donec et odio pellentesque. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Nisi lacus sed viverra tellus in hac habitasse. Nullam non nisi est sit amet. Risus nec feugiat in fermentum posuere urna nec. Nibh cras pulvinar mattis nunc sed blandit libero. Tortor pretium viverra suspendisse potenti.</p>
-                    <p>Turpis egestas maecenas pharetra convallis. Etiam erat velit scelerisque in dictum non. Eu lobortis elementum nibh tellus molestie nunc non. Turpis egestas integer eget aliquet nibh.Malesuada proin libero nunc consequat interdum. Vestibulum rhoncus est pellentesque elit ullamcorper. Sit amet venenatis urna cursus eget nunc scelerisque. Gravida quis blandit turpis cursus in. Viverra vitae congue eu consequat ac. Nunc consequat interdum varius sit amet mattis. Dolor magna eget est lorem. Morbi tempus iaculis urna id volutpat lacus laoreet.</p>
+                    <p id="professorFeed">Orientador: Documentação revisada. </p>
                 </section>
                 <div class="dropdown-divider"></div>
                 <textarea id="comments" placeholder="Insira seu comentário..."></textarea>
@@ -75,28 +80,31 @@
                 <div id="checklist">
                     <label>Checklist</label>
                         <ul>
-                            <li>Teste</li>
-                            <li>Teste 2</li>
-                            <li>Teste 3</li>
-                            <li>Teste 4</li>
+                            <li><input type="checkbox"> Entrega da documentação</li>
+                            <li><input type="checkbox"> Finalizar frontend</li>
+                            <li><input type="checkbox"> Finalizar workflow no back</li>
+                            <li><input type="checkbox"> Marcar apresentação</li>
                         </ul>
                 </div>
                 <div class="dropdown-divider"></div>
                 <div id="Note">
-                    <label>Nota</label>
-                    <br> 
-                    <b>0.0</b>
+                    <label>Lançar nota</label><br>
+                    <form>
+                        <label for="fnota">Nota:</label>
+                        <input type="text" id="fnota" name="fnota"><br><br>
+                        <input type="submit" class="btn btn-success" value="Salvar">
+                    </form>
                 </div>
                 <div class="dropdown-divider"></div>
                 <br>
-                <div id="contact">
+                <!--<div id="contact">
                     <label>Entre em contato com o seu orientador</label>
                         <button class="btn btn-primary btn-md" id="sendMail"><a href="mailto:teste@email.com?subject=Solicito contato" > Enviar mensagem</a></button>
-                    </div>        
+                    </div>-->     
                 </div>
     </div>
     <!--MODAL-->
-    <div id="modala" class="modal" tabindex="-1" role="dialog">
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -107,6 +115,20 @@
                 </div>
                 <div class="modal-body">
                 <p><!--INCLUIR AQUI EVENTO PARA LISTAR DO BANCO--></p>
+                    <select name="historico">
+                        <option value=" "><a href="#">SELECIONE</a></option>
+                        <option value="tcc-versao-11"><a href="#">TCC - Versao 11</a></option>
+                        <option value="tcc-versao-10"><a href="#">TCC - Versao 10</a></option>
+                        <option value="tcc-versao-9"><a href="#">TCC - Versao 9</a></option>
+                        <option value="tcc-versao-8"><a href="#">TCC - Versao 8</a></option>
+                        <option value="tcc-versao-7"><a href="#">TCC - Versao 7</a></option>
+                        <option value="tcc-versao-6"><a href="#">TCC - Versao 6</a></option>
+                        <option value="tcc-versao-5"><a href="#">TCC - Versao 5</a></option>
+                        <option value="tcc-versao-4"><a href="#">TCC - Versao 4</a></option>
+                        <option value="tcc-versao-3"><a href="#">TCC - Versao 3</a></option>
+                        <option value="tcc-versao-2"><a href="#">TCC - Versao 2</a></option>
+                        <option value="tcc-versao-1"><a href="https://www.google.com">TCC - Versao 1</a></option>
+                    </select>
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
